@@ -423,15 +423,17 @@ const theLastExperience = (noWorkers, window) => {
         var arr = [];
         for (var i = 0; i < n; i++) {
             var random = Math.floor(Math.random() * (max - min + 1) + min);
-            arr.push(random);
+            if (!arr.includes(random)) {
+              arr.push(random);
+            }
         }
         return arr;
       }
-      diskHistory = generateRandomArr(imageListLength, 0, imageListLength)
+      diskHistory = generateRandomArr(imageListLength, 0, imageListLength - 1)
     }
     ground = canvas.height > 500 ? 0.85 : 1.0;
     for (let i = 0; i < 6; i++) {
-      let number = diskHistory.pop()
+      let number = diskHistory.pop() || 0
       dancers.push(
         new Robot(
           i * 360 / 7,
@@ -480,7 +482,12 @@ canvas.height = canvas.offsetHeight;
 // } else {
   // falling back execution to the main thread
   worker = theLastExperience(true, window);
-  worker.postMessage({ msg: "start", elem: canvas });
+
+  // 2秒后开始
+  setTimeout(() => {
+    worker.postMessage({ msg: "start", elem: canvas });
+  }, 1000)
+
 // }
 // ---- resize event ----
 window.addEventListener(
