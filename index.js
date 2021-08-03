@@ -434,6 +434,10 @@ const theLastExperience = (noWorkers, window) => {
     ground = canvas.height > 500 ? 0.85 : 1.0;
     for (let i = 0; i < 6; i++) {
       let number = diskHistory.pop() || 0
+      console.log(location.search)
+      if (location.search && location.search.includes("self")) {
+       number = 1
+      }
       dancers.push(
         new Robot(
           i * 360 / 7,
