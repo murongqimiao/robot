@@ -2,6 +2,8 @@
 加了生成头像逻辑
 需要改的话替换index.html与heads中的内容即可
 
+![QQ20210808-214445-HD.gif](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/5560a3262fa5469db434ba902df72aa0~tplv-k3u1fbpfcp-watermark.image)
+
 点连接看
 [xb.original.ren](xb.original.ren)
 
