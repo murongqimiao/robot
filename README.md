@@ -1,4 +1,7 @@
-魔改自codepen的robot项目
+### [直接访问项目示例可查看](https://murongqimiao.github.io/robot/)
+[https://murongqimiao.github.io/robot/](https://murongqimiao.github.io/robot/)
+
+### 魔改自codepen的robot项目
 加了生成头像逻辑
 需要改的话替换index.html与heads中的内容即可
 
